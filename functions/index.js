@@ -59,3 +59,35 @@ exports.pathcing=functions.https.onRequest(function(request,response){
     return response.json(err1);
 })
 
+exports.register = functions.https.onRequest((request, response) => {
+  let username=request.body.username;
+    let password=request.body.password;
+    let pass=crypto.createHash('md5').update(password).digest('hex');
+    let path=`/${username}/`
+    const ref=database.ref();
+
+    ref.once('value',(snapshot)=> {
+        if (snapshot.hasChild(path)) {
+            return response.json({
+              message:"user already registered! please login to continue",
+            });
+        }
+       }).then((snap)=>{
+         ref.child(path).set({
+      password : pass
+    })
+  })
+
+   
+      .then((snap)=>{
+        loginBody(request,response);
+        // return response.json({
+        //  message: "data added success",
+        // })
+      })
+         .catch((err)=>{
+          return response.json({
+          message: "data not added",
+          })
+         })
+});
