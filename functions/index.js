@@ -1,16 +1,16 @@
 const functions = require('firebase-functions');
 const admin=require('firebase-admin');
-const express = require('express');
 const jwt = require('jsonwebtoken');
 const crypto=require('crypto');
 const jsonpatch=require('jsonpatch');
 admin.initializeApp();
 const database=admin.database();
-const XMLHttpRequest=require('xmlhttprequest').XMLHttpRequest;
+
+
 function loginBody(request,response)
 {
-  let username=request.post.username;
-    let password=request.post.password;
+  let username=request.body.username;
+    let password=request.body.password;
     password= crypto.createHash('md5').update(password).digest('hex');
     let ref=database.ref();
     ref.once('value',function(snapshot){
@@ -53,10 +53,12 @@ exports.pathcing=functions.https.onRequest(function(request,response){
     {
         return response.json(patcheddoc);
     }
-    let err1={
-                error: err
-             }
-    return response.json(err1);
+    else
+    {
+      return response.json({
+        message: "error"
+      })
+    }
 })
 
 exports.register = functions.https.onRequest((request, response) => {
@@ -76,18 +78,11 @@ exports.register = functions.https.onRequest((request, response) => {
          ref.child(path).set({
       password : pass
     })
+        return response.json(loginBody(request,response));
   })
-
-   
-      .then((snap)=>{
-        loginBody(request,response);
-        // return response.json({
-        //  message: "data added success",
-        // })
-      })
          .catch((err)=>{
           return response.json({
-          message: "data not added",
+          error : err
           })
          })
 });
