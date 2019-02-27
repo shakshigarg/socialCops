@@ -6,7 +6,7 @@ const crypto=require('crypto');
 const jsonpatch=require('jsonpatch');
 admin.initializeApp();
 const database=admin.database();
-
+const XMLHttpRequest=require('xmlhttprequest').XMLHttpRequest;
 function loginBody(request,response)
 {
   let username=request.post.username;
@@ -91,3 +91,22 @@ exports.register = functions.https.onRequest((request, response) => {
           })
          })
 });
+
+var Jimp=require('jimp');
+exports.th=functions.https.onRequest(function(request,response){
+Jimp.read('https://www.w3schools.com/images/w3schools_green.jpg')
+  .then(image => {
+    console.log("hi")
+    console.log(image)
+    return response.json(image
+      .resize(50, 50) // resize
+      .quality(60) // set JPEG quality
+      .greyscale() // set greyscale
+      .write('C:/Users/Lenovo/Pictures/img/1.jpg'));
+  })
+  .catch(err => {
+    console.log("here")
+    return response.json(err);
+  });
+  
+})
