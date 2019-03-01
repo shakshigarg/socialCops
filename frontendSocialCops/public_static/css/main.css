@@ -1,0 +1,79 @@
+.belowMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.col1 {
+	width: 	10%;
+}
+
+.col2{
+	width: 30%;
+	margin-left: 10%;
+}
+
+.col3{
+	width: 20%;
+}
+
+.col4{
+	width: 30%;
+}
+
+.col5{
+	width: 10%;
+}
+
+.field1 {
+  
+  /*padding: 12px 20px;*/
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 50%;
+  height: 70px;
+}
+
+.field2 {
+  
+  /*padding: 12px 20px;*/
+/*  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;*/
+  width: 50%;
+/*  height: 70px;*/
+}
+
+.applyPatch {
+	width: 50%;
+}
+
+.jsontext{
+	width: 65%;
+	margin: auto;
+	border: 1px solid lightgrey;
+	padding: 20px;
+}
+
+#jsonDoc {
+	display: none;
+}
+
+.generateThumbnail {
+	width: 50%;
+}
+
+.resize_ {
+	width: 65%;
+	margin: auto;
+	padding: 20px;
+}
+
+#resize {
+	display: none;
+}

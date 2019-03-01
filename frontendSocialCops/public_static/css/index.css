@@ -1,0 +1,84 @@
+
+.main{
+	width: 19%;
+	margin: auto;
+}
+.main-img{
+	margin-top: 50px;
+	border-radius: 50%;
+	/*adding-bottom: : 150px;*/
+	/*width: 100px;
+	height: 100px;*/
+	/*align-self: center;*/
+}
+.space{
+	height: 20px;
+}
+
+
+.text{
+	font-size: 25px;
+	font-family: verdana;
+	font-weight: lighter;
+	color: black;
+}
+
+.text-1{
+	font-size: 16px;
+	font-family: verdana;
+	font-weight: lighter;
+	color: black;
+	margin : 12px;
+}
+.main-2{
+	border: 0.5px solid lightgrey;
+	width: 20%;
+	height: auto;
+	margin: auto;
+	padding-bottom: 10px 10px 10px 10px;
+
+}
+p{
+	padding: 4px 4px 4px 4px;
+}
+
+.sign{
+	margin-bottom: 10px;
+}
+
+.n{
+	padding: 10px;
+	border: 0.5px solid lightgrey;
+}
+
+input, select {
+  
+  /*padding: 12px 20px;*/
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+
+a:hover 
+{
+     color:#00A0C6; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+.text-2{
+	font-size: 15px;
+	font-family: verdana;
+	font-weight: lighter;
+	color: black;
+	margin : 12px;
+}
+

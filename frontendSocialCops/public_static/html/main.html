@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LinkBook</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/1.css">
+	<link rel="stylesheet" type="text/css" href="../css/1navicons.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<script type="text/javascript" src="../js/jquery.js"></script>
+	<script type="text/javascript" src="../js/index.js"></script>
+
+	
+<body>
+	<div class="main b1">
+		<div class="main-1 b">
+			
+			
+		</div>
+		<div class="main-2 b">
+			
+		 <b>RESIZER</b></a>
+		</div>
+		<div class="main-3 b">
+			
+		</div>
+		<div class="main-4 b">
+       		<div class="icon-4">
+          				<span class="glyphicon glyphicon-log-out icons" onclick="signout();"></span>
+       		</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div class="belowMain">
+		<!-- <div class="col1"></div> -->
+		<div class="col2"><img src="../img/patch.png" width="50%" height="35%">
+			<br>
+			<br>
+			<br>
+			<div id="message"></div>
+			<span>JsonObject</span><br>
+			<input type="file" name="jsonObject" id='jsonObject'><br>
+			<span>JsonPatchObject</span><br>
+			<input type="file" name="jsonPatchObject" id='jsonPatchObject'>
+			<br>
+			
+			<input type="submit" name="submit" class="applyPatch"  value="applyPatch">
+			<br>
+			<br>
+	</div>
+		<!-- <div class="col3"></div> -->
+		<div class="col4"><img src="../img/patch.png" width="50%" height="35%">
+			<br>
+			<br>
+			<br>
+			
+			<span>Image URL</span><br>
+			<input type="text" class="field2" name="imageURL" id='imageURL'><br>
+			<br>
+			
+			<input type="submit" name="submit" class="generateThumbnail"  value="generateThumbnail">
+			<br>
+			<br>
+		</div>
+		<!-- <div class="col5"></div> -->
+	</div>
+	<br>
+	<br>
+	<div class="jsontext" id="jsonDoc">
+		<!-- <p>
+		A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students (or "pupils") under the direction of teachers. Most countries have systems of formal education, which is commonly compulsory.[citation needed] In these systems, students progress through a series of schools. The names for these schools vary by country (discussed in the Regional section below) but generally include primary school for young children and secondary school for teenagers who have completed primary education. An institution where higher education is taught, is commonly called a university college or university, but these higher education institutions are usually not compulsory.
+
+In addition to these core schools, students in a given country may also attend schools before and after primary and secondary education. Kindergarten or pre-school provide some schooling to very young children (typically ages 3–5). University, vocational school, college or seminary may be available after secondary school. A school may be dedicated to one particular field, such as a school of economics or a school of dance. Alternative schools may provide nontraditional curriculum and methods.
+
+There are also non-government schools, called private </p> -->
+	</div>
+
+	<div id="resize" class="resize_" >
+		<center id="imgsave"></center>
+	</div>
+
+</body>
+</html>
